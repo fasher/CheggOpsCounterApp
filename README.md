@@ -22,7 +22,7 @@ Running all dockers together should result with:
 ![result_1](images/result_1.png)
 
 Server will return the following on successful response:
-![result_2](images/result_2.png)
+- ![result_2](images/result_2.png)
 
 Good Luck,
 Chegg
