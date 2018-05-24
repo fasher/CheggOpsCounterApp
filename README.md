@@ -1,28 +1,19 @@
-# Chegg Ops - Counter app
+# Chegg Ops - Counter app - Exercise submission 
 
-This repo contains a simple counter application with 3 components:
+Hello Chegg guys,
+I have dockerized the application and created a docker-compose file that would make it easy to start the application. 
 
-1. Node Application
-2. Nginx webserver
-3. Redis database
+Prerequisite to run this is to have docker-engine and docker-compose installed. 
 
-The task should setup a local environment containing all Counter app components, in an easy and reproducible manner.
+in order to start the env:
+1. git clone the repo
+2. cd into repo dir
+3. docker-compose build
+4. docker-compose up
 
-**Requirements:**
-1. Prepare appropriate Dockerfiles for the application and webserver.
-2. Create a compose file that will run the application.
-
-To acheive this, you can use docker-compose, docker swarm stack or any other tool of your choosing.
-
-You'll
-Feel free enhancing the solution with any utility serivces (e.g. some basic monitoring) you see fit.
-
-### Result
-Running all dockers together should result with:
-![result_1](images/result_1.png)
-
-Server will return the following on successful response:
-- ![result_2](images/result_2.png)
-
-Good Luck,
-Chegg
+the up is exposed on port 80
+e.g.: 
+```
+ubuntu@ip-172-31-20-253:~/CheggOpsCounterApp/webserver$ curl localhost:80
+~                                                                                             │Hello, This page has been viewed 2 tiems <br> Hostname: 08afb84db3fa
+```

@@ -1,0 +1,21 @@
+nodeapp:
+  restart: always
+  build: ./app
+  environment:
+    - REDIS_HOST=db
+  ports:
+    - "3000"
+  links:
+    - "db"
+
+webserver:
+  restart: always
+  build: ./webserver/
+  ports:
+    - "80:80"
+    - "9000:9000"
+  links:
+    - nodeapp:nodeapp
+
+db:
+  image: redis
